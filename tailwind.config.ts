@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                blue: {
+                    100: '#E6F0FD',
+                    200: '#CCE2FC',
+                    300: '#99C5FA',
+                    400: '#66A9F7',
+                    500: '#4A90E2',
+                    600: '#1E4D8C',
+                    700: '#0D326E',
+                },
+                orange: {
+                    100: '#FFF3E0',
+                    200: '#FFE0B2',
+                    300: '#FFCC80',
+                    400: '#FFB74D',
+                    500: '#F5A623',
+                    600: '#FB8C00',
+                    700: '#F57C00',
+                },
+                green: {
+                    100: '#E8F5E9',
+                    200: '#C8E6C9',
+                    300: '#A5D6A7',
+                    400: '#81C784',
+                    500: '#66BB6A',
+                    600: '#4CAF50',
+                    700: '#388E3C',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +112,31 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(10px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    }
+                },
+                'pulse-soft': {
+                    '0%, 100%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0.8',
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.3s ease-out',
+                'pulse-soft': 'pulse-soft 2s ease-in-out infinite'
 			}
 		}
 	},
